@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Realidad Aumentada</title>
+      <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+<script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+<script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+<body style='margin : 0px; overflow: hidden;'>
+	<a-scene embedded artoolkit='sourceType: webcam;'>
+  <a-assets>
+  <!-- Eleven -->
+     
+    <a-asset-item id="eleven-obj" src="https://raw.githubusercontent.com/danyeuu/modelados/master/eleven.obj"></a-asset-item>
+    <a-asset-item id="eleven-mtl" src="https://raw.githubusercontent.com/danyeuu/modelados/master/eleven.mtl"></a-asset-item>
+
+  <!-- Una caperuza  
+   
+      <a-asset-item id="demog-obj" src="https://raw.githubusercontent.com/danyeuu/modelados/master/demog.obj"></a-asset-item>
+    <a-asset-item id="demog-mtl" src="https://raw.githubusercontent.com/danyeuu/modelados/master/demog.mtl"></a-asset-item>
+-->
+
+ </a-assets>
+
+  <a-text value="STRANGER THINGS" color="#BBB"
+          position="-.900 .588 -3" rotation="0 80 0" scale="1.5 1.5 1.5"></a-text>
+          
+
+      
+
+  <a-entity obj-model="obj: #eleven-obj; mtl: #eleven-mtl"  scale="1 1 1" position="2 -.021 -5.804" rotation=".0 64 .0" ></a-entity> 
+        <!--<a-entity obj-model="obj: #demog-obj; mtl: #demog-mtl"  position=".184 .847 -4.065" scale=".1 .1 .1" rotation=".0 64 .0"> </a-entity> -->
+
+		<a-marker-camera preset='hiro'></a-marker-camera>
+	</a-scene>
+</body>
